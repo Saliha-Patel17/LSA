@@ -1,0 +1,14 @@
+Installing nfs server:-sudo apt-get -y install nfs-kernel-server
+
+sudo systemctl enable nfs-kernel-server
+
+Create a new directory and file in it:-mkdir demo
+toucha.txt
+
+open /etc/exports-sudo nano etc/exports
+
+Add line at end of file:-/home/z/demo 127.0.0.1(rw)
+
+Use below command it will create a table and see record:-sudo exportfs-ra 
+
+Mount the file and tranfer to othr directory:-sudo mount -t nfs 127.0.01:/home/z/demo /home/z
